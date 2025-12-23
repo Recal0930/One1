@@ -46,18 +46,18 @@
             height: 100%;
             border: none;
         }
-        /* 文字介绍区域 */
+        /* 文字介绍区域（字号放大） */
         .desc-box {
             text-align: center;
             margin-bottom: 20px;
         }
         .main-desc {
-            font-size: 18px;
+            font-size: 20px;
             color: #2d3748;
             font-weight: 500;
             line-height: 1.6;
         }
-        /* 新增图片容器 - 全屏宽度 */
+        /* 客户反馈图片容器 - 全屏宽度 */
         .middle-img-box {
             width: 100%;
             margin-bottom: 20px;
@@ -68,19 +68,32 @@
             box-shadow: 0 3px 15px rgba(0,0,0,0.1);
             display: block;
         }
-        /* 红色提示小字 */
-        .tips-text {
-            font-size: 15px;
+        /* 混合颜色提示文字 */
+        .mix-tips {
+            font-size: 17px;
+            font-weight: 600;
+            line-height: 1.8;
+            margin-bottom: 30px;
+            text-align: center;
+        }
+        .mix-tips .red-text {
+            color: #e53935;
+        }
+        .mix-tips .black-text {
+            color: #2d3748;
+        }
+        /* 二维码上方提示文字 */
+        .qrcode-tips {
+            font-size: 17px;
             color: #e53935;
             font-weight: 600;
-            line-height: 1.5;
-            margin-bottom: 30px;
-            text-align: center; /* 红色文字居中 */
+            text-align: center;
+            margin-bottom: 15px;
         }
-        /* 二维码区域 - 强制3:4比例 */
+        /* 二维码区域 - 放大尺寸+3:4比例 */
         .qrcode-box {
             text-align: center;
-            width: 220px;
+            width: 260px; /* 从220px放大到260px */
             margin: 0 auto;
             aspect-ratio: 3 / 4;
         }
@@ -106,22 +119,29 @@
             <iframe src="https://player.bilibili.com/player.html?bvid=BV1bSBMBvE4w&page=1&danmaku=0&high_quality=1" allowfullscreen="true"></iframe>
         </div>
 
-        <!-- 主介绍文字（修改后） -->
+        <!-- 主介绍文字 -->
         <div class="desc-box">
             <p class="main-desc">全球影视剧动漫综艺随心看✅<br>微信可直接在线观看</p>
         </div>
 
-        <!-- 新增中间图片（全屏宽度） -->
+        <!-- 客户反馈图片 -->
         <div class="middle-img-box">
             <img class="middle-img" src="https://ftp.mioz.cn/test/2025/12/23/1766497803.JPG" alt="客户反馈展示图">
         </div>
 
-        <!-- 红色提示小字（修改后+居中） -->
-        <p class="tips-text">🔥 非免费分享，介意勿加哦～<br>如需获取超级影视库入口，扫码添加下方微信<br>即刻开启便捷观影之旅！</p>
+        <!-- 混合颜色提示文字 -->
+        <div class="mix-tips">
+            <span class="red-text">🔥 非免费分享，介意勿加哦～</span><br>
+            <span class="black-text">如需获取超级影视库入口，扫码添加下方微信</span><br>
+            <span class="black-text">即刻开启便捷观影之旅！</span>
+        </div>
 
-        <!-- 二维码图片 - 3:4比例 -->
+        <!-- 二维码上方提示文字 -->
+        <p class="qrcode-tips">↓长按下方二维码识别↓</p>
+
+        <!-- 二维码图片（放大尺寸） -->
         <div class="qrcode-box">
-            <img class="qrcode-img" src="https://ftp.mioz.cn/test/2025/12/23/1766496832.JPG" alt="微信二维码">
+            <img class="qrcode-img" src="https://ftp.mioz.cn/test/2025/12/23/1766498746.JPG" alt="微信二维码">
         </div>
     </div>
 </body>
