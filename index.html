@@ -49,14 +49,23 @@
         /* 文字介绍区域 */
         .desc-box {
             text-align: center;
-            margin-bottom: 15px;
+            margin-bottom: 20px;
         }
         .main-desc {
             font-size: 18px;
             color: #2d3748;
             font-weight: 500;
             line-height: 1.6;
-            margin-bottom: 10px;
+        }
+        /* 新增图片容器 */
+        .middle-img-box {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .middle-img {
+            width: 80%;
+            border-radius: 12px;
+            box-shadow: 0 3px 15px rgba(0,0,0,0.1);
         }
         /* 红色提示小字 */
         .tips-text {
@@ -65,6 +74,7 @@
             font-weight: 600;
             line-height: 1.5;
             margin-bottom: 30px;
+            text-align: center; /* 红色文字居中 */
         }
         /* 二维码区域 - 强制3:4比例 */
         .qrcode-box {
@@ -90,17 +100,22 @@
             <h1>全球影视会员丨终身制</h1>
         </div>
 
-        <!-- B站视频 - 3:4比例 -->
+        <!-- B站视频 - 正确BV号 -->
         <div class="video-box">
-            <iframe src="https://player.bilibili.com/player.html?bvid=FzNuKWP&page=1&danmaku=0" allowfullscreen="true"></iframe>
+            <iframe src="https://player.bilibili.com/player.html?bvid=BV1bSBMBvE4w&page=1&danmaku=0&high_quality=1" allowfullscreen="true"></iframe>
         </div>
 
-        <!-- 文字介绍 -->
+        <!-- 主介绍文字 -->
         <div class="desc-box">
-            <p class="main-desc">超级影视库｜全球影视剧随心看✅<br>微信直接在线观看，随时观影</p>
+            <p class="main-desc">全球影视剧动漫综艺随心看✅<br>微信直接在线观看，随时观影</p>
         </div>
 
-        <!-- 红色提示小字 -->
+        <!-- 新增中间图片 -->
+        <div class="middle-img-box">
+            <img class="middle-img" src="https://ftp.mioz.cn/test/2025/12/23/1766497803.JPG" alt="影视库展示图">
+        </div>
+
+        <!-- 红色提示小字（已居中） -->
         <p class="tips-text">🔥 非免费分享，介意勿加哦～<br>如需获取超级影视库入口，扫码添加下方微信，即刻开启便捷观影之旅！</p>
 
         <!-- 二维码图片 - 3:4比例 -->
