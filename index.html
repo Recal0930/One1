@@ -32,21 +32,20 @@
             font-size: 24px;
             font-weight: 600;
         }
-        /* B站视频容器 - 强制3:4比例 */
-        .video-box {
+        /* 替换视频的图片容器 - 贴合标题块 */
+        .main-img-box {
             width: 100%;
-            aspect-ratio: 3 / 4;
-            background-color: #000;
-            border-radius: 0 0 12px 12px;
+            background-color: #fff;
+            border-radius: 0 0 12px 12px; /* 与标题块圆角衔接 */
             overflow: hidden;
             margin-bottom: 25px;
         }
-        .video-box iframe {
+        .main-img {
             width: 100%;
-            height: 100%;
-            border: none;
+            height: auto; /* 按图片自身比例显示，不强制变形 */
+            display: block;
         }
-        /* 文字介绍区域（字号放大） */
+        /* 文字介绍区域 */
         .desc-box {
             text-align: center;
             margin-bottom: 20px;
@@ -82,18 +81,10 @@
         .mix-tips .black-text {
             color: #2d3748;
         }
-        /* 二维码上方提示文字 */
-        .qrcode-tips {
-            font-size: 17px;
-            color: #e53935;
-            font-weight: 600;
-            text-align: center;
-            margin-bottom: 15px;
-        }
-        /* 二维码区域 - 放大尺寸+3:4比例 */
+        /* 二维码区域 - 放大尺寸 */
         .qrcode-box {
             text-align: center;
-            width: 260px; /* 从220px放大到260px */
+            width: 260px;
             margin: 0 auto;
             aspect-ratio: 3 / 4;
         }
@@ -105,6 +96,15 @@
             box-shadow: 0 3px 15px rgba(0,0,0,0.1);
             border-radius: 12px;
         }
+        /* 二维码下方提示文字（调整位置后） */
+        .qrcode-tips {
+            font-size: 17px;
+            color: #e53935;
+            font-weight: 600;
+            text-align: center;
+            margin-top: 15px; /* 改为顶部间距 */
+            margin-bottom: 20px;
+        }
     </style>
 </head>
 <body>
@@ -114,9 +114,9 @@
             <h1>全球影视会员丨终身制</h1>
         </div>
 
-        <!-- B站视频 - 正确BV号 -->
-        <div class="video-box">
-            <iframe src="https://player.bilibili.com/player.html?bvid=BV1bSBMBvE4w&page=1&danmaku=0&high_quality=1" allowfullscreen="true"></iframe>
+        <!-- 替换视频的图片 - 贴合标题块，按原图比例显示 -->
+        <div class="main-img-box">
+            <img class="main-img" src="https://ftp.mioz.cn/test/2025/12/23/1766501626.JPG" alt="影视库首页展示图">
         </div>
 
         <!-- 主介绍文字 -->
@@ -136,13 +136,13 @@
             <span class="black-text">即刻开启便捷观影之旅！</span>
         </div>
 
-        <!-- 二维码上方提示文字 -->
-        <p class="qrcode-tips">↓长按下方二维码识别↓</p>
-
-        <!-- 二维码图片（放大尺寸） -->
+        <!-- 二维码图片 -->
         <div class="qrcode-box">
             <img class="qrcode-img" src="https://ftp.mioz.cn/test/2025/12/23/1766498746.JPG" alt="微信二维码">
         </div>
+
+        <!-- 二维码下方提示文字（修改内容+调整位置） -->
+        <p class="qrcode-tips">↑长按识别上方二维码↑</p>
     </div>
 </body>
 </html>
